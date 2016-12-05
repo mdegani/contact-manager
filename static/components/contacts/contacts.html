@@ -1,0 +1,29 @@
+<h3>Contact List</h3>
+<div class="ph3">
+  <button
+    ng-click="$ctrl.toggleView()"
+    class="f6 link dim ba ph3 pv2 mb2 dib purple">
+    Show as {{$ctrl.showAsList ? 'List' : 'Grid'}}
+    </button>
+  <button
+    ng-click="$ctrl.addContact()"
+    class="f6 link dim ba ph3 pv2 mb2 dib purple">
+    Add Contact
+    </button>
+  <input type="search"
+    ng-model="$ctrl.filterText"
+    placeholder="filter"/>
+</div>
+
+<md-contact-grid
+  ng-if="!$ctrl.showAsList"
+  contacts="$ctrl.contacts"
+  filter-text="$ctrl.filterText">
+  </md-contact-grid>
+
+<md-contact-list
+  ng-if="$ctrl.showAsList"
+  contacts="$ctrl.contacts"
+  filter-text="$ctrl.filterText">
+  </md-contact-list>
+

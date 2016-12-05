@@ -1,0 +1,50 @@
+<form novalidate action="">
+  <label>
+    First Name
+    <input
+      type="text" 
+      ng-model="$ctrl.contact.firstName">
+  </label><br>
+  <label>
+    Last Name
+    <input 
+      type="text" 
+      ng-model="$ctrl.contact.lastName">
+  </label><br>
+  <label>
+    Title
+    <input 
+      type="text" 
+      ng-model="$ctrl.contact.title">
+  </label><br>
+  <label>
+    Address 1
+    <input 
+      type="text" 
+      ng-model="$ctrl.contact.Address1">
+  </label><br>
+  <label>
+    City
+    <input 
+      type="text" 
+      ng-model="$ctrl.contact.City">
+  </label><br>
+  <label>
+    State
+    <input 
+      type="text" 
+      ng-model="$ctrl.contact.State">
+  </label><br>
+  <label>
+    Phone
+    <input type="tel" 
+      ng-model="$ctrl.contact.phone">
+  </label><br>
+  <input 
+    type="button" 
+    ng-click="$ctrl.reset()" 
+    value="Cancel" />
+  <input type="submit" 
+    ng-click="$ctrl.save($ctrl.contact.id)" 
+    value="Save" />
+</form>

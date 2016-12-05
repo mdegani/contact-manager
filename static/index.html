@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contacts</title>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css"/>
+  
+  <script src="https://rawgit.com/angular/bower-angular/master/angular.min.js"></script>
+  <script src="https://npmcdn.com/angular-ui-router@1.0.0-alpha.4/release/angular-ui-router.js"></script>
+  <script src="./app.js"></script>
+
+  <!--components-->
+  <script src="./components/contacts/contacts.js"></script>
+  <script src="./components/edit-contact/edit-contact.component.js"></script>
+  <script src="./components/add-contact/add-contact.component.js"></script>
+  <script src="./components/edit-contact-form/edit-contact-form.component.js"></script>
+  <script src="./components/contact-grid/contact-grid.component.js"></script>
+  <script src="./components/contact-list/contact-list.component.js"></script>
+  <script src="./components/contact-card/contact-card.component.js"></script>
+  <script src="./components/home/home.component.js"></script>
+
+  <!--services-->
+  <script src="./services/contact.service.js"></script>
+
+</head>
+<body ng-app="contact-app">
+  <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+    <nav class="f6 fw6 ttu tracked">
+      <a class="link dim white dib mr3" ui-sref="home" ui-sref-active="active" title="Home">Home</a>
+      <a class="link dim white dib mr3" ui-sref="contacts" ui-sref-active="active">Contacts</a>
+    </nav>
+  </header>
+  <div class="pt5">
+    <ui-view></ui-view>
+  </div>
+   
+</body>
+</html>

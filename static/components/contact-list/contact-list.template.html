@@ -1,0 +1,5 @@
+<md-contact-card 
+  ng-repeat="contact in $ctrl.contacts | filter: $ctrl.filterText" 
+  contact="contact" 
+  editFunction="$ctrl.edit.bind(this, contact.id)">
+  </md-contact-card>

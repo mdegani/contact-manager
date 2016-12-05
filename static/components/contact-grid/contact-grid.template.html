@@ -1,0 +1,47 @@
+<table
+  class="collapse ba br2 b--black-10 pv2 ph3">
+  <tbody>
+    <tr
+      class="striped--light-gray ">
+      <th
+        class="pv2 ph3 tl f6 fw6 ttu">
+          First Name
+        </th>
+      <th
+        class="tr f6 ttu fw6 pv2 ph3">
+          Last Name
+        </th>
+      <th
+        class="tr f6 ttu fw6 pv2 ph3">
+          Phone Number
+        </th>
+      <th
+        class="tr f6 ttu fw6 pv2 ph3">
+          
+        </th>
+      </tr>
+  <tr
+    class="striped--light-gray"
+    ng-repeat="contact in $ctrl.contacts | filter: $ctrl.filterText">
+      <td class="pv2 ph3">
+        {{contact.firstName}}
+        </td>
+      <td
+        class="pv2 ph3">
+        {{contact.lastName}}
+        </td>
+      <td
+        class="pv2 ph3">
+        {{contact.phone}}
+        </td>
+      <td
+        class="pv2 ph3">
+        <button
+          class="f6 button-reset bg-white ba b--black-10 dim pointer pv1 black-60" 
+          ng-click="$ctrl.edit(contact.id)">
+          Edit
+          </button>
+        </td>
+      </tr>
+  </tbody>
+</table>
