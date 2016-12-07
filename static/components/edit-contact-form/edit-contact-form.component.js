@@ -13,6 +13,8 @@ angular.module('contact-app')
         if (this.formType === 'edit') {
           ContactService.updateContact(id, this.contact).then(response => {
             return $state.go('contacts');
+          }).catch(function(error){
+            console.error('Error saving.', error);
           });
         }
         if (this.formType === 'create') {
