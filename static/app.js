@@ -25,17 +25,4 @@ angular.module('contact-app', ['ui.router'])
     states.forEach(function (state) {
       $stateProvider.state(state);
     });
-  })
-  .component('mdMain', {
-    templateUrl: './mainTemplate.html',
-    controllerAs: 'vm',
-    controller: function ($http) {
-      var vm = this;
-      vm.getAllContacts = $http.get('/what').then(function (response) {
-        vm.contacts = response.data;
-      });
-      vm.viewDetails = function (contact) {
-        alert('your contacts name is ' + contact.firstName);
-      }
-    }
   });
